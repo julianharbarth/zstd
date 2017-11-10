@@ -35,7 +35,7 @@ target_compile_definitions(zstd PUBLIC
 )
 target_include_directories(zstd SYSTEM PUBLIC lib lib/common)
 if (MSVC)
-  target_compile_definitions(zstd PUBLIC
+  target_compile_definitions(zstd PRIVATE
     _UNICODE
     UNICODE
   )
