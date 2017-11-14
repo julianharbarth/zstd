@@ -1716,6 +1716,7 @@ size_t ZSTD_decompress(void* dst, size_t dstCapacity, const void* src, size_t sr
     return regenSize;
 #else   /* stack mode */
     ZSTD_DCtx dctx;
+    ZSTD_initDCtx_internal(&dctx);
     return ZSTD_decompressDCtx(&dctx, dst, dstCapacity, src, srcSize);
 #endif
 }
