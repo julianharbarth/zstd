@@ -37,6 +37,5 @@ if (MSVC)
     _CRT_SECURE_NO_WARNINGS
     _UNICODE
     UNICODE
-    ZSTD_HEAPMODE=0
   )
 endif()
