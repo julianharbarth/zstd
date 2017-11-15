@@ -28,15 +28,15 @@ set(src-files
   lib/deprecated/zbuff_decompress.c)
 add_library(zstd STATIC ${src-files})
 target_compile_definitions(zstd PUBLIC
-    _CRT_SECURE_NO_WARNINGS
-    ZSTD_HEAPMODE=0
     XXH_NAMESPACE=ZSTD_
     ZSTD_LEGACY_SUPPORT=0
 )
 target_include_directories(zstd SYSTEM PUBLIC lib lib/common)
 if (MSVC)
   target_compile_definitions(zstd PRIVATE
+    _CRT_SECURE_NO_WARNINGS
     _UNICODE
     UNICODE
+    ZSTD_HEAPMODE=0
   )
 endif()
