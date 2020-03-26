@@ -20,6 +20,8 @@ set(src-files
   lib/compress/zstd_ldm.c
   lib/decompress/huf_decompress.c
   lib/decompress/zstd_decompress.c
+  lib/decompress/zstd_decompress_block.c
+  lib/decompress/zstd_ddict.c
   lib/dictBuilder/cover.c
   lib/dictBuilder/divsufsort.c
   lib/dictBuilder/zdict.c
